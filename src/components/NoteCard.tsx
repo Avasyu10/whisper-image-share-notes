@@ -38,8 +38,8 @@ export const NoteCard = ({ note, onUpdate, onDelete }: NoteCardProps) => {
   return (
     <>
       <div 
-        className="group relative bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 overflow-hidden border border-gray-100"
-        style={{ backgroundColor: note.color }}
+        className="group relative glass-card rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden border border-slate-600/30 hover:border-blue-500/30 transform hover:scale-[1.02]"
+        style={{ backgroundColor: note.color === '#ffffff' ? 'rgba(51, 65, 85, 0.2)' : note.color }}
       >
         {note.image && (
           <div className="w-full h-48 overflow-hidden">
@@ -51,46 +51,46 @@ export const NoteCard = ({ note, onUpdate, onDelete }: NoteCardProps) => {
           </div>
         )}
         
-        <div className="p-4">
+        <div className="p-5">
           {note.title && (
-            <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2">
+            <h3 className="font-semibold text-slate-100 mb-3 line-clamp-2 text-lg">
               {note.title}
             </h3>
           )}
           
           {note.content && (
-            <p className="text-gray-600 text-sm mb-3 line-clamp-4 whitespace-pre-wrap">
+            <p className="text-slate-300 text-sm mb-4 line-clamp-4 whitespace-pre-wrap leading-relaxed">
               {note.content}
             </p>
           )}
           
-          <div className="flex items-center justify-between text-xs text-gray-400">
+          <div className="flex items-center justify-between text-xs text-slate-500">
             <span>{formatDate(note.updatedAt)}</span>
           </div>
         </div>
 
-        <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <div className="flex gap-1">
+        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <div className="flex gap-2">
             <button
               onClick={() => setIsEditModalOpen(true)}
-              className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
+              className="p-2 glass-card rounded-full shadow-md hover:bg-slate-600/50 transition-colors"
               title="Edit note"
             >
-              <Edit size={14} className="text-gray-600" />
+              <Edit size={14} className="text-slate-300" />
             </button>
             <button
               onClick={handleShare}
-              className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
+              className="p-2 glass-card rounded-full shadow-md hover:bg-slate-600/50 transition-colors"
               title="Share note"
             >
-              <Share size={14} className="text-gray-600" />
+              <Share size={14} className="text-blue-400" />
             </button>
             <button
               onClick={() => onDelete(note.id)}
-              className="p-2 bg-white rounded-full shadow-md hover:bg-red-50 transition-colors"
+              className="p-2 glass-card rounded-full shadow-md hover:bg-red-500/20 transition-colors"
               title="Delete note"
             >
-              <Trash2 size={14} className="text-red-600" />
+              <Trash2 size={14} className="text-red-400" />
             </button>
           </div>
         </div>
