@@ -51,7 +51,7 @@ export const EditNoteModal = ({
   return <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold">Edit Note</h2>
+          <h2 className="text-lg font-semibold text-slate-950">Edit Note</h2>
           <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
             <X size={20} />
           </button>
@@ -78,7 +78,7 @@ export const EditNoteModal = ({
               Add an image:
             </label>
             <div className="flex items-center gap-3">
-              <label className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg cursor-pointer transition-colors">
+              <label className="flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors bg-slate-950">
                 <Upload size={16} />
                 <span className="text-sm">Upload Image</span>
                 <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
