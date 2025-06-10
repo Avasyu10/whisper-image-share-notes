@@ -90,7 +90,7 @@ export const CreateNoteModal = ({
             <button type="button" onClick={onClose} className="flex-1 px-4 py-2 text-gray-600 rounded-lg transition-colors bg-gray-500 hover:bg-gray-400">
               Cancel
             </button>
-            <button type="submit" disabled={!title.trim() && !content.trim() && !image} className="flex-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+            <button type="submit" disabled={!title.trim() && !content.trim() && !image} className="flex-1 px-4 py-2 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors bg-blue-800 hover:bg-blue-700">
               Create Note
             </button>
           </div>
