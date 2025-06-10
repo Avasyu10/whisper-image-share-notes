@@ -59,8 +59,8 @@ export const NoteCard = ({
 
         <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           <div className="flex gap-2">
-            <button onClick={() => setIsEditModalOpen(true)} className="p-2 glass-card rounded-full shadow-md hover:bg-slate-600/50 transition-colors" title="Edit note">
-              <Edit size={14} className="text-slate-300 bg-slate-900" />
+            <button onClick={() => setIsEditModalOpen(true)} title="Edit note" className="p-2 glass-card rounded-full shadow-md transition-colors bg-gray-200 hover:bg-gray-100">
+              <Edit size={14} className="text-slate-300 bg-black" />
             </button>
             <button onClick={handleShare} className="p-2 glass-card rounded-full shadow-md hover:bg-slate-600/50 transition-colors" title="Share note">
               <Share size={14} className="text-blue-400" />
