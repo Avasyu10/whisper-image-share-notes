@@ -46,7 +46,7 @@ export const CreateNoteModal = ({
       <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-4 border-b">
           <h2 className="text-lg font-semibold text-gray-950">Create New Note</h2>
-          <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
+          <button onClick={onClose} className="p-1 rounded-full transition-colors text-stone-950 bg-red-600 hover:bg-red-500">
             <X size={20} />
           </button>
         </div>
